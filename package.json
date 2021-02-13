@@ -1,0 +1,23 @@
+{
+  "name": "draft1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabinchauhan90/draft1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nabinchauhan90/draft1/issues"
+  },
+  "homepage": "https://github.com/nabinchauhan90/draft1#readme",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "nodemon": "^2.0.7"
+  }
+}
