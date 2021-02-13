@@ -7,42 +7,26 @@
         <title>Draft1 | <%=title %> </title>
     </head>
     <body>
-        <header>
-            <% const name="James" %>
-            <p><%=name + ' Was Here But He Left as soon as we were here!!' %></p>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/add-article">Add Article</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                </ul>
-            </nav>
-
-        </header>
+        <%- include('./partials/header.ejs') %>
         <div class="main-content">
             <h1>Home</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, cupiditate.</p>
             <div class="content-details">
                 <h3>Special Features</h3>
-                <ul>
-                    <li>
-                        <p class="feature">Feature 1</p>
-                    </li>
-                    <li>
-                        <p class="feature">Feature 2</p>
-                    </li>
-                    <li>
-                        <p class="feature">Feature 3</p>
-                    </li>
-                    <li>
-                        <p class="feature">Feature 4</p>
-                    </li>
-                </ul>
+                    <%if(articles.length > 0) {%>
+                        <ul>
+                            <% articles.forEach(article=>{ %>
+                                <li>
+                                    <h5><%= article.name %></h5>
+                                    <p><%= article.description %></p> 
+                                </li>
+                            <%})%>
+                        </ul>
+                    <%} else{%>
+                        <p>Sorry No Articles Found.</p>
+                    <% }%>
             </div>
         </div>
-        <footer>
-            <p>&copy;NC, 2020 All rights reserved.lol</p>
-        </footer>
+        <%- include('./partials/footer.ejs') %>
     </body>
 </html>

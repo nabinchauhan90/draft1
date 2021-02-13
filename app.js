@@ -9,13 +9,29 @@ app.listen(5206);
 
 //routings
 app.get("/", (req, res) => {
-    res.render("index", { title: "Home" });
+    const articles = [
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+    ];
+    res.render("index", { title: "Home",articles });
 });
 app.get("/about", (req, res) => {
     res.render("about",{title:'About'});
 });
 app.get("/articles", (req, res) => {
-    res.render("articles",{title:'Articles'});
+    const articles = [
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+        {'name':'Covid -19 Effects','description':"All the effects of Covid-19 to people's life.",},
+    ];
+    res.render("articles",{title:'Articles', articles});
 });
 app.get("/add-article", (req, res) => {
     res.render("add-article",{title:'Add Article'});

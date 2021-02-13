@@ -7,17 +7,7 @@
         <title>Draft1 | <%= title %> </title>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/add-article">Add Article</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                </ul>
-            </nav>
-
-        </header>
+        <%- include('./partials/header.ejs') %>
         <div class="main-content">
             <h1>About</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, cupiditate.</p>
@@ -25,8 +15,6 @@
                 <h3>Special Features</h3>
             </div>
         </div>
-        <footer>
-            <p>&copy;NC, 2020 All rights reserved.lol</p>
-        </footer>
+        <%- include('./partials/footer.ejs') %>
     </body>
 </html>

@@ -7,16 +7,7 @@
         <title>Draft1 | 404 </title>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/add-article">Add Article</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                </ul>
-            </nav>
-
+        <%- include('./partials/header.ejs') %>
         </header>
         <div class="main-content">
             <h1>404 Not Found</h1>
@@ -24,8 +15,6 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, cupiditate.</p>
             </div>
         </div>
-        <footer>
-            <p>&copy;NC, 2020 All rights reserved.lol</p>
-        </footer>
+        <%- include('./partials/footer.ejs') %>
     </body>
 </html>
